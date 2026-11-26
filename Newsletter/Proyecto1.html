@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan food</title>
+     <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta name="theme-color" content="#cf3f2b">
+  <!-- en el <head>, antes de tu CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Bodoni+Moda:ital,wght@0,400;0,800;1,400&family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        scroll-behavior: smooth;
+    }
+    #wrapper{
+        width: 800px;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+body{
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+    #piso1{
+        width: 800px;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #F8F0E6;
+    }
+    #piso1_logo{
+        width: 30px;
+        height: 60px;
+        background-image: url(torii.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #piso1_titulo{
+        width: 240px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        color: #171717;
+        font-family: 'Marcellus', serif;  
+        p{
+            font-size: 7px;
+            color: #171717;
+            font-family: 'Bodoni Moda', serif;
+            font-weight: bold;
+        }       
+    }
+    #piso1_nav{
+        width: 400px;
+        height: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #171717;
+        cursor: pointer;
+        nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: 'Bodoni Moda', serif;
+        }
+        a{
+            color:#171717;
+        }
+    }
+    #inicio{
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #inicio:hover{
+        color: rgb(139, 8, 8);
+        font-size: 20px;
+        box-shadow: 0px 0px 2px 2px rgb(139, 8, 8);
+        box-shadow:inset 0px 0px 2px 2px rgb(139, 8, 8);
+    }
+    #platos{
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #platos:hover{
+        color: rgb(139, 8, 8);
+        font-size: 20px;
+        box-shadow: 0px 0px 2px 2px rgb(139, 8, 8);
+        box-shadow:inset 0px 0px 2px 2px rgb(139, 8, 8);
+    }
+    #ciudades{
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #ciudades:hover{
+        color: rgb(139, 8, 8);
+        font-size: 20px;
+        box-shadow: 0px 0px 2px 2px rgb(139, 8, 8);
+        box-shadow:inset 0px 0px 2px 2px rgb(139, 8, 8);
+    }
+    #miscelanea{
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #miscelanea:hover{
+        color: rgb(139, 8, 8);
+        font-size: 20px;
+        box-shadow: 0px 0px 2px 2px rgb(139, 8, 8);
+        height: 35px;
+        width: 110px;
+        box-shadow:inset 0px 0px 2px 2px rgb(139, 8, 8);
+    }
+    #piso1_bandera{
+        width: 80px;
+        height: 40px;
+        background-image: url(bandera.png);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    #piso2{
+        width: 800px;
+        height: 300px;
+        background: url(banner.png);
+
+    }
+    #piso2_texto{
+        width: 330px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #piso2_japo{
+        width: 310px;
+        height: 20px;
+        color: rgb(139, 8, 8);
+    }
+    #piso2_titulo{
+        width: 330px;
+        height: 40px;
+        color: #171717;
+        font-family: 'Marcellus', serif;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #piso2_desc{
+        width: 310px;
+        height: 120px;
+        color: #171717;
+        text-align: justify;
+        font-size: 12.5px;
+        font-family: 'Bodoni Moda', serif;
+    }
+    #piso2_relleno{
+        width: 100px;
+        height: 10px;
+    }
+    #piso2_final{
+        width: 140px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        background-color: rgb(139, 8, 8);
+        color: white;
+        font-family: 'Bodoni Moda', serif;
+        cursor: pointer;
+    }
+    #piso2_final:hover{
+        background: #a52a3a;
+        border-color: #a52a3a;
+        box-shadow: 0 6px 18px rgba(128, 0, 32, 0.4);
+    }
+    #piso3{
+        width: 800px;
+        height: 440px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background:url(sol.png) no-repeat top right / 50% 50%, #F8F0E6;
+        flex-direction: column;
+    }
+    #piso3_titulo{
+        width: 450px;
+        height: 50px;  
+        color: #171717;
+        font-family: 'Marcellus', serif;  
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #piso3_subtitulo{
+        width: 400px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #171717;
+        font-family: 'Bodoni Moda', serif;
+        text-align: justify;
+        padding: 15px;
+    }
+  
+    #piso3_platos{
+        width: 780px;
+        height: 240px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        font-family: 'Bodoni Moda', serif;
+        div{
+            width: 110px;
+            height: 250px;       
+        }
+        div:hover{
+            width: 150px;
+            height: 270px;
+                img{
+                box-shadow: 0px 0px 8px 8px #8888878f;
+                width: 130px;
+                height: 130px;}
+                p{
+                    font-size: 14px;
+                }
+        }
+
+        img{
+            width: 95px;
+            height: 95px;
+            border-radius: 100px;
+            box-shadow: 2px 2px 3px 3px #888887ad;
+        }
+        img{
+            width: 110px;
+            height: 110px;
+        }
+
+        p{
+            font-size: 10px;
+            text-align: justify;
+            color: #171717;
+        }
+        h4{
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso4{
+        width: 800px;
+        height: 200px;
+        background: url(banner2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;   
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #piso4_arriba{
+        width: 800px;
+        height: 30px;     
+        h3{
+            width: 180px;
+            height: 30px;
+            text-align: center;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso4_abajo{
+        width: 800px;
+        height: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #piso4_relleno{
+        width: 90px;
+        height: 140px;
+    }
+    #piso4_obj{
+        width: 140px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        p{
+            font-size: 10px;
+            color: #1b1b1b;
+            text-align: justify;
+            font-family: 'Bodoni Moda', serif;
+        }
+        h4{
+            font-size: 14px;
+            color: #171717;
+        }
+
+    }
+
+
+    #piso5{
+        width: 800px;
+        height: 750px;
+        background-color: #F8F0E6;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #piso5_1{
+        width: 800px;
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #foto_tokio{
+        width: 200px;
+        height: 140px;
+        img{
+            width: 180px;
+            height: 140px;
+            box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+        }
+    }
+    #descr_tokio{
+        width: 200px;
+        height: 140px;
+        color: #1b1b1b; 
+        font-family: 'Bodoni Moda', serif;
+        font-size: 14px;
+        h3{
+            font-family: 'Marcellus', serif;  
+         }
+    }
+    #platos_tokio{
+        width: 390px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        
+        img{
+            width: 90px;
+            height: 60px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{  
+            box-shadow: 0px 18px 4px 4px rgba(87, 86, 86, 0.24);
+        }
+        figcaption{
+            font-weight: bold;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso5_2{
+        width: 800px;
+        height: 140px;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+       #foto_kioto{
+        width: 180px;
+        height: 140px;
+        img{
+            width: 180px;
+            height: 140px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{box-shadow: 0px 8px 20px rgba(87, 86, 86, 0.103);
+        }
+    }
+    #descr_kioto{
+        width: 190px;
+        height: 140px;
+        color: #1b1b1b;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 14px;
+        h3{ font-family: 'Marcellus', serif; 
+     }  
+
+    }
+    #platos_kioto{
+        width: 390px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        img{
+            width: 90px;
+            height: 60px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+            border-radius: 10px;
+        }
+        img:hover{  
+            box-shadow: 0px 18px 4px 4px rgba(87, 86, 86, 0.103);
+        }
+        figcaption{
+            font-weight: bold;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso5_3{
+        width: 800px;
+        height: 140px;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+       #foto_osaka{
+        width: 180px;
+        height: 140px;
+        img{
+            width: 180px;
+            height: 140px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+        }
+    }
+    #descr_osaka{
+        width: 190px;
+        height: 140px;
+        color: #1b1b1b;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 14px;
+        h3{ font-family: 'Marcellus', serif;  } 
+    }
+    #platos_osaka{
+        width: 390px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        img{
+            width: 90px;
+            height: 60px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+            border-radius: 10px;
+        }
+        img:hover{  
+            box-shadow: 0px 18px 4px 4px rgba(87, 86, 86, 0.103);
+        }
+        figcaption{
+            font-weight: bold;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso5_4{
+        width: 800px;
+        height: 140px;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+       #foto_hiro{
+        width: 180px;
+        height: 140px;
+        img{
+            width: 180px;
+            height: 140px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+
+        }
+        img:hover{box-shadow: 0px 8px 20px rgba(87, 86, 86, 0.103);
+        }
+    }
+    #descr_hiro{
+        width: 190px;
+        height: 140px;
+        color: #1b1b1b; 
+        font-family: 'Bodoni Moda', serif;
+        font-size: 14px;
+        h3{ font-family: 'Marcellus', serif;  }
+    }
+    #platos_hiro{
+        width: 390px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        img{
+            width: 90px;
+            height: 60px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{  
+            box-shadow: 0px 18px 4px 4px rgba(87, 86, 86, 0.24);
+        }
+        figcaption{
+            font-weight: bold;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso5_5{
+        width: 800px;
+        height: 140px;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+       #foto_sappo{
+        width: 180px;
+        height: 140px;
+        img{
+            width: 180px;
+            height: 140px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+
+        }
+        img:hover{box-shadow: 0px 8px 20px rgba(87, 86, 86, 0.103);
+        }
+    }
+    #descr_sappo{
+        width: 190px;
+        height: 140px;
+        color: #1b1b1b; 
+        font-family: 'Bodoni Moda', serif;
+        font-size: 14px;
+        h3{ font-family: 'Marcellus', serif;  }
+    }
+    #platos_sappo{
+        width: 390px;
+        height: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        img{
+            width: 90px;
+            height: 60px;
+        box-shadow: 2px 2px 3px 3px rgba(87, 86, 86, 0.459);
+        }
+        img:hover{  
+            box-shadow: 0px 18px 4px 4px rgba(87, 86, 86, 0.24);
+        }
+        figcaption{
+            font-weight: bold;
+            color: #171717;
+            font-family: 'Marcellus', serif;  
+        }
+    }
+    #piso6{
+        width: 800px;
+        height: 50px;
+        background-image: url(pie.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #pie_texto{
+        width: 350px;
+        height: 34px;
+        font-size: 14px;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Marcellus', serif; 
+    }
+    #redes{
+        width: 320px;
+        height: 34px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <div id="piso1">
+            <div id="piso1_logo"></div>
+            <div id="piso1_titulo"> SABORES DE JAPÓN <P>TRADICIÓN - CULTURA - GASTRONOMÍA</P></div>
+            <div id="piso1_nav"><nav>
+                
+                <a href="#piso3"><article id="platos">Platos</article></a>
+                <a href="#piso4"><article id="miscelanea">Miscelanea</article></a>
+                <a href="#piso5"><article id="ciudades">Ciudades</article></a>
+                <a href="#piso6"><article id="inicio">Redes</article></a>
+                
+                
+            </nav></div>
+            <div id="piso1_bandera"></div>
+        </div>
+        <div id="piso2">
+            <div id="piso2_texto">
+                <div id="piso2_japo"><h4>日本をひと口で</h4></div>
+                <div id="piso2_titulo"><h1>Japón en cada bocado</h1></div>               
+                <div id="piso2_desc"><p>La gastronomía japonesa se destaca por su respeto a los ingredientes frescos y de temporada, buscando la armonía de sabores a través de técnicas precisas. Sus pilares fundamentales son el arroz, los pescados crudos o cocidos y los caldos fermentados, priorizando siempre una presentación visualmente artística.</p></div>
+                <div id="piso2_relleno"></div>
+                <div id="piso2_final"><p>¡Descubre más!</p></div>
+            </div>
+        </div>
+        <div id="piso3">
+            <div id="piso3_titulo"><h3>Platos imprescindibles de la cocina japonesa</h3></div>
+            
+            <div id="piso3_subtitulo"><p>El sushi, el ramen o la tempura son solo alguno de los iconos de una gastronomía rica, variada y llena de matices. Pero Japón ofrece mucho más. Aquí tienes algunos de los platos que no te puedes perder.</p></div>
+            
+            <div id="piso3_platos">
+                <div id="sushi">
+                    <img src="sushi.jpg">
+                    <h4>Sushi</h4>
+                    <p>Arroz aliñado con vinagre, acompañado de pescado o varios.</p>
+                </div>
+                <div id="ramen">
+                    <img src="ramen.jpg">
+                    <h4>Ramen</h4>
+                    <p>Sopa de fideos con un caldo sabroso de carne, huevo o verduras.</p>
+                </div>
+                <div id="tempura">
+                    <img src="tempura.jpg">
+                    <h4>Tempura</h4>
+                    <p>Ingredientes fritos en una masa frita y crujiente.</p>
+                </div>
+                <div id="oko">
+                    <img src="oko.jpg">
+                    <h4>Okonomiyaki</h4>
+                    <p>Tortita salada con col, huevo y dsitintos ingredientes.</p>
+                </div>
+                <div id="yaki">
+                    <img src="yaki.jpg">
+                    <h4>Yakitoro</h4>
+                    <p>Brochetas de pollo a la parrilla con un sabor intenso y delicioso.</p>
+                </div>
+                <div id="matcha">
+                    <img src="matcha.jpg">
+                    <h4>Matcha</h4>
+                    <p>Té verde en polvo, muy presente en postres y bebidas.</p>
+                </div>
+            </div>
+        </div>
+        <div id="piso4">
+            <div id="piso4_arriba">
+            <h3>Miscelanea japonesa</h3>
+            </div>
+            <div id="piso4_abajo">
+            <div id="piso4_relleno"></div>
+            <div id="piso4_obj">
+                <img src="palillos.png">
+                <h4>El uso de los palillos</h4>
+                <p>En Japón, los palillos (hashi), son más que un utensilio. Son parte de la cultura.</p>
+            </div>
+            <div id="piso4_obj">
+                <img src="bol.webp">
+                <h4>El arroz</h4>
+                <p>El arroz es la bade de la dieta japonesa y simboliza prosperidad y armonía.</p>
+            </div>
+            <div id="piso4_obj">
+                <img src="pez.png">
+                <h4>Productos frescos</h4>
+                <p>La cocina japonesa valoran ingredientes de temporada, siempre frescos.</p>
+            </div>
+            <div id="piso4_obj">
+                <img src="torii_peke.webp">
+                <h4>La presentación</h4>
+                <p>La comida se sirve con mimo, buscando siempre la armonía visual y de sabores.</p>
+            </div>
+            <div id="piso4_relleno"></div>   
+            </div>      
+        </div>
+        <div id="piso5">
+            <div id="piso5_1">
+                <div id="foto_tokio">
+                    <img src="tokio.jpg">
+                </div>
+                <div id="descr_tokio">
+                    <h3>Tokio</h3>
+                    <h4>Capital del sabor moderno</h4>
+                    <p>Tokio es la capital de Japón y la metrópolis más poblada del mundo.</p>
+                </div>
+                <div id="platos_tokio">
+                    <figure>
+                        <img src="sushi_tokio.jpg">
+                        <figcaption>Sushi</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ramen_tokio.webp">
+                        <figcaption>Ramen</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tonkatsu_tokio.jpg">
+                        <figcaption>Tonkatsu</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="unagi_tokio.jpg">
+                        <figcaption>Unagi</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="piso5_2">
+                <div id="foto_kioto">
+                    <img src="kioto.jpg">
+                </div>
+                <div id="descr_kioto">
+                    <h3>Kioto</h3>
+                    <h4>Tradición en cada plato</h4>
+                    <p>Descatacada por su moderna y refinada agstronomía</p>
+                </div>
+                <div id="platos_kioto">
+                    <figure>
+                        <img src="kaiseki_kioto.jpg">
+                        <figcaption>Kaiseki</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="matcha_kioto.jpg">
+                        <figcaption>Matcha</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="yudofu_kioto.jpg">
+                        <figcaption>Yudofu</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="obanzai_kioto.jpg">
+                        <figcaption>Obanzai</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="piso5_3">
+                <div id="foto_osaka">
+                    <img src="osaka.jpg">
+                </div>
+                <div id="descr_osaka">
+                    <h3>Osaka</h3>
+                    <h4>La ciudad de la comida</h4>
+                    <p>Conocida como la cocina de Japón</p>
+                </div>
+                <div id="platos_osaka">
+                    <figure>
+                        <img src="kushi_oaka.jpg">
+                        <figcaption>Kushikatsu</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="oku_osaka.jpg">
+                        <figcaption>Okunomayaki</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tako_osaka.jpg">
+                        <figcaption>Takoyaki</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ramen_osaka.webp">
+                        <figcaption>Ramen</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="piso5_4">
+                <div id="foto_hiro">
+                    <img src="hiro.jpg">
+                </div>
+                <div id="descr_hiro">
+                    <h3>Hiroshima</h3>
+                    <h4>Sabor con historia</h4>
+                    <p>Una ciudad que es la bomba</p>
+                </div>
+                <div id="platos_hiro">
+                    <figure>
+                        <img src="ostras_hiro.jpg">
+                        <figcaption>Kalki</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="anago_hiro.jpg">
+                        <figcaption>Anago</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="sushi_hiro.jpg">
+                        <figcaption>Sushi</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="momji_hiro.jpg">
+                        <figcaption>Momji Mamjo</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="piso5_5">
+                <div id="foto_sappo">
+                    <img src="sappo.jpg">
+                </div>
+                <div id="descr_sappo">
+                    <h3>Sapporo</h3>
+                    <h4>El sabor del norte</h4>
+                    <p>Isla de Hokkaido, llena de productor de mar y tierra</p>
+                </div>
+                <div id="platos_sappo">
+                    <figure>
+                        <img src="sushi_sappo.jpg">
+                        <figcaption>Sushi</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ramen_sappo.jpg">
+                        <figcaption>Ramen</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="genghis_sappo.avif">
+                        <figcaption>Genghis Khan</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="miso_sappo.jpg">
+                        <figcaption>Sopa Miso</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div id="piso6">
+            <div id="pie_texto">
+                <h3> ¡Más que comida, una experiencia cultural! ぽ</h3>
+            </div>
+            <div id="redes">
+            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FJaponAndMore%2F%3Flocale%3Des_ES"><img src="face.png"></a>
+            <a href="https://www.instagram.com/popular/japon/"><img src="insta.png"></a>
+            <a href="https://www.tiktok.com/tag/jap%C3%B3n"><img src="tiktok.jpg"></a>
+            <a href="https://www.youtube.com/hashtag/jap%C3%B3n"><img src="yt.webp"></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
