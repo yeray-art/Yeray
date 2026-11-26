@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitología Celta</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        scroll-behavior: smooth;
+        interpolate-size: allow-keywords;
+    }
+    #wrapper{
+        width: 650px;
+        height: 240vh;
+        display: flex;
+       justify-items: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+body {
+    background-image: url(background.png);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+    #planta1{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: url(header.png) no-repeat center /100% 100%;
+ 
+        #foto_header{
+            width: 130px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        img{
+            width: 130px;
+            height: 90px;
+            transform: translate(-5px, 10px);
+            transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        img:hover{
+            transform: translate(-5px, 10px) rotate(360deg);
+        }
+        }
+    }
+    #header_izq{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+    #header_dch{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(header2.png);
+        background-size: 90% 90%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        }
+        #fototitulo_header{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+    #titulo_header{
+        width: 320px;
+        height: 70px;
+        font-family: 'Cinzel', serif;
+        color: #D6AD62;
+    }
+    #subtitulo_header{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 200px;
+        height: 70px;
+        font-family: 'Cormorant Garamond', serif;
+        color: #E8DCC1
+    }
+    #menu_header{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        transform: translate(-10px, -5px);
+        font-family: 'Lora', serif;
+        font-size: 14px;
+        a{
+        color: #E8DCC1;
+        }
+    }
+    #doble_sub {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        #doble_span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 4px;
+        }
+
+        #sub1{
+            display: block;
+            width: 50%;
+            height: 3px;
+            transform: scaleX(0);
+            transition: transform 0.6s ease-in-out;
+            transform-origin: left;
+            border-radius: 10px 0px 0px 10px;
+            background-color:  #D6AD62;
+        }
+        #sub2{
+            background-color: #D6AD62;
+            display: block;
+            width: 50%;
+            height: 3px;
+            transform: scaleX(0);
+            transition: transform 0.6s ease-in-out;
+            transform-origin: right;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+    
+        #doble_sub:hover{
+        #sub1{
+            transform: scale(1);
+        }
+        #sub2{
+            transform: scale(1);
+        }  
+    }
+
+    #planta2{
+        width: 100%;
+        height: 217px;
+        background: url(troquel.png) no-repeat 0% 70% /40% 30%,
+        url(cabecera.png) no-repeat center / 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #planta2_izq{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #planta2_titulo{
+        width: 90%;
+        height: 20%;
+        font-family: 'Cinzel', serif;
+        color: #244B35;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #planta2_parrafo{
+        width: 90%;
+        height: 60%;
+        font-family: 'Lora', serif;
+        color: #526653;
+    }
+    #boton_mapa{
+        width: 30%;
+        height: 15%;
+        border: none;
+        transform: translate(-35px, -10px);
+        background: #263d2de1;
+        color: #E8DCC1;
+        border: 1px solid #B9914E;
+        border-radius: 5px;
+        background-image: linear-gradient(90deg, #263D2D 50%, transparent 50%);
+        background-size: 200% 100%;           
+        background-position: 100% 0;     
+        transition: background .5s ease, color .5s, transform .5s, box-shadow .5s, color .5s;
+        font-family: 'Cinzel', serif;
+    }
+    #boton_mapa:hover{
+        background-position: 0 0;   
+        color: #FFFFFF;
+        border-color: #D6AD62;
+        box-shadow: 0 0 12px #B9914E55;
+        transform: translate(-35px, -10px) scale(1.1);           
+    }
+    #mapa_celta{
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;  
+         img{
+            inset: 0 0;
+            margin: auto;
+            width: 60%;
+            height: 80%;
+            display: block;
+            opacity: 0;
+            transition: transform 1s ease-in .5s, opacity 1s ease-in .5s;
+        }  
+    } 
+    
+    #mapa_celta::backdrop{
+        background-image: url(backdrop_mapa.png);
+        background-size: 100% 100%;
+    }
+    
+    
+    #mapa_celta:hover{
+        img{
+            transform: translateY(50px) ;
+            opacity: 1;
+        }  
+    }
+    
+    #planta2_dch{
+        width: 50%;
+        height: 100%;
+    }
+
+    #planta3{
+        width: 100%;
+        height: 698px;
+        background: url(separador.webp) no-repeat 95% 5% / 55% 10%, url(main.png) no-repeat center / 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #planta3_texto{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     #planta3_texto_izq{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translate(20px, 500px);
+        img{
+            width: 45%;
+            height: 50%;
+        }
+        h4{
+            color: #E8DCC1;
+             font-family: 'Cormorant Garamond', serif;
+             font-size: 14px;
+             transform: translate(5px, -5px);
+        }
+        h2{
+           
+            color:#D6AD62;
+            font-family: 'Cinzel', serif;
+            transform: translateY(-10px);
+        }
+        p{
+            color: #E8DCC1;
+            font-family: 'Lora', serif;
+            font-size: 13px;
+            text-align: justify;
+            font-style: italic;
+            transform: translateY(-20px);
+        }
+    }
+    #flechas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 30%;
+}
+#flecha1{
+    transform: translate(-10px, -10px);
+}
+#flecha2{
+    transform: translate(14px, -10px);
+}
+#trisquel{
+    width: 15%;
+    aspect-ratio: 1/1;
+    transform: translate(-310px, 710px);
+    transition: transform .8s cubic-bezier(0.8, -0.5, 0.2, 1.8);
+}
+    #planta3_texto_dch{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{ 
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            text-align: justify;
+            width: 360px;
+           color: #526653;
+    }
+        h2{ 
+            width: 360px;
+            height: 70px;
+            font-family: 'Cinzel', serif;
+            color: #244B35;
+    }
+    }
+    #planta3_tarjetas{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .tarjetas{
+        width: 150px;
+        height: 97%;
+    }
+
+    #heroes{
+        background: url(heroes.png) no-repeat 55% 5% /90% 40%, url(tarjeta_vertical.png) no-repeat center /100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       flex-direction: column;  
+    }
+     #dioses{
+        background: url(dioses.png) no-repeat 55% 5% /90% 40%, url(tarjeta_vertical.png) no-repeat center /100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       flex-direction: column;  
+    }
+     #criaturas{
+        background: url(criaturas.png) no-repeat 55% 5% /90% 40%, url(tarjeta_vertical.png) no-repeat center /100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       flex-direction: column;  
+    }
+     #leyenda{
+        background: url(mundo.png) no-repeat 55% 5% /90% 40%, url(tarjeta_vertical.png) no-repeat center /100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       flex-direction: column;  
+    }
+    .heroes_arriba{
+        width: 100%;
+        height: 45%;
+        }
+    .heroes_abajo{
+        width: 100%;
+        height: 55%;
+         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        h4{
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: #244B35;
+        }
+        p{
+            width: 80%;
+            height: 55%;
+            font-family: 'Lora', serif;
+            font-size: 11.5px;
+            text-align: justify;
+            color: #526653;
+        }
+        button{
+            width: 55%;
+            height: 20%;
+            transform: translateY(-12px);
+             background: #263d2d;
+            color: #E8DCC1;
+            border: 1px solid #B9914E;
+            border-radius: 5px;
+             font-family: 'Cinzel', serif;
+             box-shadow: 0 6px 12px -8px #263d2d;
+             transition: transform .3s ease-out, box-shadow .3s ease-out;
+        }
+        button:hover{
+            transform: translateY(-20px);         
+            box-shadow: 0 8px 8px #263d2d88;
+        }
+        }
+
+
+.galeria_heroes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.tarjeta_heroe {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 280px;
+    gap: 20px;
+    background: #211b16;
+    border: 1px solid #b9914e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+    
+    transform: translateY(100px) scale(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+#fotos_leyendas{
+    width: 80%;
+    height: 90%;
+}
+.tarjeta_dioses {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 280px;
+    gap: 20px;
+    background: #211b16;
+    border: 1px solid #b9914e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+    transform: translateX(500px) scale(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    #fotos_dioses{
+        width: 80%;
+        height: 90%;
+    }
+}
+.tarjeta_criaturas {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 280px;
+    gap: 20px;
+    background: #211b16;
+    border: 1px solid #b9914e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+    transform: translateX(-500px) scale(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    #fotos_criaturas{
+        width: 80%;
+        height: 90%;
+    }
+}
+
+.hero_izq {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+    width: 60%;
+    height: 90%;
+    object-fit: fill;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px black;
+    }
+}
+
+
+.heroe_dch {
+    flex: 1;
+    color: #e8dcc1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        width: 80%;
+        height: 50%;
+    }
+
+     h3{
+    color: #d5ad65;
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    transform: translateY(20px);
+    }
+
+    p{
+    font-size: 13px;
+    text-align: justify;
+    color: #E8DCC1;
+    text-align: justify;
+    font-family: 'Lora', serif;
+    transform: translateY(-20px);
+    }
+}
+
+#popo_heroes{
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;    
+    }
+    #popo_heroes:popover-open{   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    #popo_heroes::backdrop{
+           background-image: url(backdrop1.png);
+            background-size: 100% 100%;
+        }
+#popo_heroes:hover {
+     .tarjeta_heroe{  
+    transform: translate(200px, 0) scale(1);
+     }
+}
+#heroe1 { transition-delay: 0.5s; }
+#heroe2 { transition-delay: 1.5s; }
+#heroe3 { transition-delay: 2.5s; }
+
+#popo_dioses{
+        border: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;   
+        overflow: hidden; 
+    }
+    #popo_dioses:popover-open{   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    #popo_dioses::backdrop{
+           background-image: url(backdrop2.png);
+            background-size: 100% 100%;
+        }
+#popo_dioses:hover {
+     .tarjeta_dioses{
+    transform: translate(200px, 0) scale(1);
+     }
+}
+#dios1 { transition-delay: 0.5s; }
+#dios2 { transition-delay: 1.5s; }
+#dios3 { transition-delay: 2.5s; }
+
+#popo_criaturas{
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;    
+    }
+    #popo_criaturas:popover-open{   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    #popo_criaturas::backdrop{
+           background-image: url(backdrop4.png);
+            background-size: 100% 100%;
+        }
+#popo_criaturas:hover {
+     .tarjeta_criaturas{
+    transform: translate(200px, 0) scale(1);
+     }
+}
+#criatura1 { transition-delay: 0.5s; }
+#criatura2 { transition-delay: 1.5s; }
+#criatura3 { transition-delay: 2.5s; }
+
+#popo_historias{
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;    
+    }
+    #popo_historias:popover-open{   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    #popo_historias::backdrop{
+           background-image: url(backdrop3.png);
+            background-size: 100% 100%;
+        }
+#popo_historias:hover {
+     .tarjeta_heroe{
+    transform: translate(200px, 0) scale(1);
+     }
+}
+#leyenda1 { transition-delay: 0.5s; }
+#leyenda2 { transition-delay: 1.5s; }
+#leyenda3 { transition-delay: 2.5s; }
+
+ #planta3_merlin{
+    flex: 1;
+    height: 30%;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    
+ }
+
+ #planta4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:  650px;
+    height: 300px;
+    background-image: url(cabecera2.png);
+    background-size: 100% 100%;
+ }
+ #planta4_arriba{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: #244B35;
+        font-family: 'Cinzel', serif;
+    }
+    p{
+        text-align: justify;
+        width: 80%;
+        color: #526653;
+        font-family: 'Lora', serif;
+    }
+ }
+ #planta4_abajo{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: url(paisaje_fondo.webp);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+    
+ }
+ .planta4_tarjetas{
+    width: 120px;
+    height: 90%;
+    box-shadow: 0px 0px 10px rgba(50, 35, 20, 0.616);
+    background: linear-gradient(180deg, #FBF4E4 0%, #EAD1A3 100%);
+    border: 1px solid #C8A96E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: bottom center;
+
+    img{
+        width: 100%;
+        height: 60%;
+    }
+    h4{
+        color: #244B35;
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+        height: 10%;
+    }
+    p{
+        color: #526653;
+        font-family: 'Lora', serif;
+        font-size: 11px;
+        text-align: justify;
+        width: 80%;
+        height: 30%;
+        transform: translateY(3px);
+    }
+ }
+#tarjeta1{
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+#tarjeta2{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+#tarjeta3{
+    transform: translateX(-200%);
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+#tarjeta4{
+    transform: translateX(-300%);
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+#planta4_abajo:hover{
+    #tarjeta1{
+        opacity: 1;
+        transform: rotate(-2deg);
+    }
+    #tarjeta2{
+    transform: translateX(0%) rotate(2deg);
+    opacity: 1;
+    }
+    #tarjeta3{
+    transform: translateX(0%) rotate(-2deg);
+    opacity: 1;
+    }
+    #tarjeta4{
+    transform: translateX(0%) rotate(-2deg);
+    opacity: 1;
+}
+}
+
+#footer{
+    width: 100%;
+    height: 222px;
+    background: url(triqueta.png) no-repeat 3% 90% /10% 30%,
+    url(separador_footer.png) no-repeat 50% 55% / 100% 50%, 
+    url(footer_nuevo.png) no-repeat center / 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#footer_arriba{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#footer_arriba_izq{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3{
+        color: #D6AD62;
+        font-size: 15px;
+        width: 80%;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    p{
+        color: #E8DCC1;
+        font-size: 12px;   
+        width: 80%;   
+         font-family: 'Lora', serif;
+    }
+}
+#texto_footer{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#email_footer{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        width: 55%;
+        height: 45%;
+        transition: transform .5s;
+    }
+}
+#email_footer:hover{
+    img{
+        box-shadow:0px 0px 20px #c59f59be;
+        transform: scale(1.1);
+    }
+}
+#footer_arriba_dch{
+    width: 40%;
+    height: 100%;
+}
+#footer_abajo{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#footer_abajo_izq{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4{
+        color: #D6AD62;
+        font-family: 'Cormorant Garamond', serif;
+        width: 55%;
+        font-size: 15px;
+    }
+    p{
+        color: #E8DCC1;
+        font-family: 'Lora', serif;
+        font-size: 12px;   
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 55%;
+    }
+}
+#footer_abajo_dch{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+    img{
+        width: 35px;
+        aspect-ratio: 1/1;
+    }
+    #tik{
+        transition: transform .5s;
+    }
+    #fb{
+        transition: transform .5s;
+    }
+    #yt{
+        transition: transform .5s;
+    }
+    #insta{
+        transition: transform .5s;
+    }
+    #tik:hover{
+        transform: scale(1.2);
+    }
+    #fb:hover{
+        transform: scale(1.2);
+    }
+    #yt:hover{
+        transform: scale(1.2);
+    }
+    #insta:hover{
+        transform: scale(1.2);
+    }
+}
+
+
+label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;                   
+  height: 30px;                   
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E8DCC1;               
+  background-color: #162616;      
+  border: 2px solid #c5a059;      
+  border-radius: 25px;            
+  cursor: pointer;
+  transform: translate(-30px, 5px);
+  transition: all .8s ease;
+}
+
+label:hover {
+  background-color: #c5a059;
+  color: #162616;
+  box-shadow: 0 0 10px rgba(230, 198, 117, 0.5);
+}
+
+
+input {
+  background-color: #f5eedc; 
+  border: 2px solid #b8963e; 
+  border-radius: 50px; 
+  color: #2c261b; 
+  outline: none;
+  width: 60%;
+  height: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transform: translate(85px, 35px);
+}
+
+input::placeholder {
+  color: #8a7f6b;
+}
+
+input:focus {
+  border-color: #e5c158;
+  box-shadow: 0 0 8px rgba(229, 193, 88, 0.4);
+}
+
+#boton_cerrar{
+    background: #263D2D;
+    color: #D6B66C;
+    border: 1px solid #A9853E;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px; 
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+    transform: translate(200%, 820%);
+}
+
+#boton_cerrar:hover {
+    background: #B58B3D;
+    color: #f5eedc; 
+    border-color: #E5C477;
+    box-shadow: 0 0 12px rgba(181, 139, 61, 0.35);
+    transform: translate(200%, 820%) scale(1.2);
+}
+#boton_cerrar_mapa{
+    background: #263D2D;
+    color: #D6B66C;
+    border: 1px solid #A9853E;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px; 
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: 'Cinzel', serif;
+    transform: translate(900%, 170%);
+}
+#boton_cerrar_mapa:hover {
+    background: #B58B3D;
+    color: #f5eedc; 
+    border-color: #E5C477;
+    box-shadow: 0 0 12px rgba(181, 139, 61, 0.35);
+    transform: translate(900%, 170%) scale(1.2);
+}
+
+#planta5{
+    width: 650px;
+    height: 600px;
+    background: url(circulo.png) no-repeat 50% 90% / 70% 80%,
+    url(main3.png) no-repeat center / 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#planta5_arriba{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        text-align: center;
+        color: #244B35;
+        font-size: 27px;
+        font-family: 'Cinzel', serif;
+    }
+    p{
+        color: #526653;
+        font-family: 'Lora', serif;
+    }
+    
+}
+#planta5_fotos{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    #foto1{
+        width: 55%;
+        height: 75%;
+        background-image: url(1111_opa.png);
+        background-size: 100% 100%;            
+        transform: translate(72px, 10px);
+        transition: background 1s, opacity 1s;
+
+    }
+    #foto1:hover{
+        background-image: url(1111.png);
+       
+           #tooltip1{
+                opacity:1;
+            }
+    }
+    #foto2{
+        width: 55%;
+        height: 75%;
+        background-image: url(2222222_opa.png);
+        background-size: 100% 100%;               
+        transition: background 1s, opacity 1s;
+        transform: translate(-72px, 10px);
+    }
+    #foto2:hover{
+        background-image: url(2222222.png);
+       
+           #tooltip2{
+                opacity:1;
+            }
+    }
+    #foto3{
+        width: 54%;
+        height: 72%;
+        background-image: url(33333_opa.png);
+        background-size: 100% 100%;               
+        transition: background 1s, opacity 1s;
+        transform: translate(72px, -50px);
+    }
+    #foto3:hover{
+        background-image: url(33333_nuevo.png);
+       
+           #tooltip3{
+                opacity:1;
+            }
+    }
+    #foto4{
+        width: 55%;
+        height: 75%;
+        background-image: url(44444_opa.png);
+        background-size: 100% 100%;               
+        transition: background 1s, opacity 1s;
+        transform: translate(-70px, -50px);
+    }
+    #foto4:hover{
+        background-image: url(44444.png);
+       
+           #tooltip4{
+                opacity:1;
+            }
+    }
+}
+
+.cuadrante{
+    width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip{
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    aspect-ratio: 4/3;
+    background: url(separador_tarjetas.png) no-repeat center / 80% 30%, url(tooltip.png) no-repeat center / 100% 100%;
+    transform: translate(-65px, -30px);
+    transition: opacity 1s ease-in-out 1s;
+    h3{
+        font-family: 'Cinzel', serif;
+        color: #244B35;
+    }
+    p{
+        font-family: 'Lora', serif;
+        color: #526653;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        width: 90%;
+    }
+}
+#tooltip2{
+    transform: translate(100px, -38px);
+}
+#tooltip3{
+    transform: translate(-70px, 90px);
+}
+#tooltip4{
+    transform: translate(100px, 90px);
+}
+
+
+
+    
+</style>
+<body>
+    <div id="wrapper">
+        <div id="planta1">
+            <div id="header_izq">
+                <div id="fototitulo_header">
+            <div id="foto_header"><img src="detalle_izq.png"></div>
+            <div id="titulo_header"><h1>Ecos Ancestrales</h1>
+            <p id="subtitulo_header">Donde los mitos despiertan y las leyendas cobran vida.</p></div>
+            </div>
+           <nav id="menu_header">
+            <a href="#planta3"><div id="doble_sub">
+                Historia
+                <div id="doble_span">
+                <span id="sub1"></span>
+                <span id="sub2"></span>
+             </div>
+            </div></a>
+            <a href="#planta3_merlin"><div id="doble_sub">
+                ¡Merlín!
+                <div id="doble_span">
+                <span id="sub1"></span>
+                <span id="sub2"></span>
+             </div>
+            </div></a>
+            <a href="#planta4"><div id="doble_sub">
+                Miscelánea
+                <div id="doble_span">
+                <span id="sub1"></span>
+                <span id="sub2"></span>
+             </div>
+            </div></a>
+            <a href="#planta5"><div id="doble_sub">
+                Ciclos
+                <div id="doble_span">
+                <span id="sub1"></span>
+                <span id="sub2"></span>
+             </div>
+            </div></a>
+            <a href="#footer"><div id="doble_sub">
+                Suscríbete
+                <div id="doble_span">
+                <span id="sub1"></span>
+                <span id="sub2"></span>
+             </div>
+            </div></a>
+           </nav>
+           </div>
+           <div id="header_dch"></div>
+        </div>
+        
+        <div id="planta2">
+            <div id="planta2_izq">
+                <div id="planta2_titulo"><h2>Nuestra historia</h2></div>
+                <div id="planta2_parrafo"><p>Dioses, héroes, criaturas y leyendas de un mundo de magia, naturaleza y sabiduría ancestral.</p></div>
+                <div id="troquel"></div>
+                <button id="boton_mapa" popovertarget="mapa_celta" popovertargetaction="show">Ver Mapa</button>
+
+                <div id="mapa_celta" popover="auto">
+                        <img src="mapa.png">
+                    <button id="boton_cerrar_mapa" class="play" popovertarget="mapa_celta" popovertargetaction="hide">Cerrar</button>
+                </div>
+                
+            </div>
+            <div id="planta2_dch">
+                <img id="trisquel" src="trisquel.png">
+            </div>
+        </div>
+
+        <div id="planta3">
+            <div id="planta3_texto">
+                <div id="planta3_texto_izq">
+                    <h4>PERSONAJE DESTACADO</h4>
+                    <div id="flechas"><img id ="flecha1" src="flecha 1.png"><h2>Merlín</h2><img id ="flecha2" src="flecha2.png"></div>
+                    <p>"No importa cuán oscura parezca la tormenta, recuerda que la verdadera magia reside en la fuerza de tu voluntad para cambiar el destino. Cada paso que das hoy, por pequeño que parezca, construye el camino hacia lo que creías imposible."</p>
+                    
+                    
+                </div>
+                <div id="planta3_texto_dch">
+                <h2>Explora la mitología celta</h2>
+                <p>Lejos de los grandes templos y los dioses de mármol, la mitología celta se siente mucho más cercana a la tierra: huele a bosque mojado, a niebla en las montañas y a historias contadas al calor del fuego. Es un mundo donde la naturaleza tiene voz propia, los animales guardan mensajes y lo sobrenatural aparece sin avisar.</p>
+                </div>
+            </div>
+            <div id="planta3_tarjetas">
+
+                <div class="tarjetas" id="dioses">
+                    <div class="heroes_arriba"></div>
+                    <div class="heroes_abajo">
+                    <h4>Dioses y diosas</h4>
+                    <p>Descubre a las principales deidades del panteón celta, sus poderes y símbolos.</p>
+                    <button popovertarget="popo_dioses" popovertargetaction="show">Dioses</button>
+                    <div id="popo_dioses" popover="auto">
+                        <div class="galeria_heroes">
+
+                                <div id="dios1" class="tarjeta_dioses">
+                                    <div class="hero_izq">
+                                        <img id="fotos_dioses" src="dios1.png">
+                                    </div>
+                                    <div class="heroe_dch">
+                                        <h3>El Dagda</h3>
+                                        <img src="separador_tarjetas.png">
+                                        <p>El Dagda, conocido como el Buen Dios, es una de las divinidades más poderosas de la mitología celta irlandesa y líder de los Tuatha Dé Danann. Señor de la abundancia, la fertilidad y la magia, poseía una fuerza extraordinaria y una sabiduría sin igual. Entre sus objetos sagrados destacaban un enorme garrote capaz de otorgar la muerte y devolver la vida. </p>
+                                    </div>
+                                </div>
+
+                                <div id="dios2" class="tarjeta_dioses">
+                                    <div class="hero_izq">
+                                        <img id="fotos_dioses" src="dios2.png">
+                                    </div>
+                                    <div class="heroe_dch">
+                                        <h3>Lugh</h3>
+                                        <img src="separador_tarjetas.png">
+                                        <p>Lugh, conocido como el de la Larga Mano, es uno de los dioses más importantes de la mitología celta irlandesa y una de las figuras más destacadas de los Tuatha Dé Danann. Dios de la luz, las artes y las habilidades, era reconocido por su extraordinario talento en la guerra, la magia, la artesanía y el conocimiento. </p>
+                                    </div>
+                                </div>
+
+                                <div id="dios3" class="tarjeta_dioses">
+                                    <div class="hero_izq">
+                                        <img id="fotos_dioses" src="dios3.png">
+                                    </div>
+                                    <div class="heroe_dch">
+                                        <h3>Brigid</h3>
+                                        <img src="separador_tarjetas.png">
+                                        <p>Brigid es una de las diosas más veneradas de la mitología celta irlandesa, asociada con el fuego, la inspiración, la poesía, la sanación y la fertilidad. Hija del poderoso Dagda y perteneciente a los Tuatha Dé Danann, representaba la luz del conocimiento, la creatividad y la renovación de la vida. </p>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <button id="boton_cerrar" class="play" popovertarget="popo_dioses" popovertargetaction="hide">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tarjetas" id="heroes">
+                    <div class="heroes_arriba"></div>
+                    <div class="heroes_abajo">
+                    <h4>Héroes legendarios</h4>
+                    <p>Grandes guerreros, reyes y figuras míticas que marcaron la historia celta.</p>
+                    <button popovertarget="popo_heroes">Héroes</button>
+                    <div id="popo_heroes" popover="auto">
+                        <div class="galeria_heroes">
+
+    <div id="heroe1" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img src="heroe1.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Cú Chulainn</h3>
+             <img src="separador_tarjetas.png">
+            <p>Considerado el mayor héroe de la mitología irlandesa, Cú Chulainn fue hijo del dios Lugh y destacó desde niño por su fuerza y extraordinario valor. Según la leyenda, obtuvo su nombre tras derrotar al feroz perro guardián del herrero Culann, prometiendo ocupar su lugar como protector. Su furia guerrera, conocida como frenesí de batalla, lo convirtió en un adversario temible. </p>
+        </div>
+    </div>
+
+    <div id="heroe2" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img src="heroe3.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Boudica</h3>
+             <img src="separador_tarjetas.png">
+            <p>Fue la poderosa reina de los icenos, un pueblo celta de Britania que se enfrentó al dominio del Imperio romano. Tras sufrir la humillación y los abusos de las autoridades romanas después de la muerte de su esposo, Prasutago, Boudica encabezó una gran rebelión entre los años 60 y 61 d. C. Consiguió reunir a numerosas tribus y lideró ataques contra importantes asentamientos romanos, como Camulodunum y Londinium. </p>
+        </div>
+    </div>
+
+    <div id="heroe3" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img src="heroe2.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Vercingétorix</h3>
+             <img src="separador_tarjetas.png">
+            <p>Fue un destacado caudillo de los arvernos que logró unir a numerosas tribus galas frente a la expansión de Roma. Durante las campañas de Julio César, organizó una resistencia basada en alianzas entre pueblos y tácticas militares destinadas a debilitar al ejército romano. Su mayor enfrentamiento tuvo lugar en el asedio de Alesia, en el año 52 a. C., donde quedó rodeado por las legiones de César. </p>
+        </div>
+    </div>
+    
+
+</div>
+<button id="boton_cerrar" class="play" popovertarget="popo_heroes" popovertargetaction="hide">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tarjetas" id="criaturas">
+                    <div class="heroes_arriba"></div>
+                    <div class="heroes_abajo">
+                    <h4>Criaturas mágicas</h4>
+                    <p>Desde hadas hasta bestias del otro mundo, descubre el bestiario celta.</p>
+                    <button popovertarget="popo_criaturas">Criaturas</button>
+                    <div id="popo_criaturas" popover="auto">
+                        <div class="galeria_heroes">
+
+    <div id="criatura1" class="tarjeta_criaturas">
+        <div class="hero_izq">
+            <img id="fotos_criaturas" src="criatura1.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Banshee</h3>
+             <img src="separador_tarjetas.png">
+             <p>Banshee es un espíritu femenino de la mitología celta cuyo lamento anuncia la muerte de alguien cercano. Se la representa como una mujer fantasmal de larga cabellera, rostro pálido y vestiduras blancas o grises. Su grito sobrenatural, conocido como el lamento de la banshee, es considerado un presagio de desgracia y muerte. Es una de las criaturas más misteriosas y temidas del folclore irlandés.</p>
+        </div>
+    </div>
+
+    <div id="criatura2" class="tarjeta_criaturas">
+        <div class="hero_izq">
+            <img id="fotos_criaturas" src="criatura2.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Kelpie</h3>
+             <img src="separador_tarjetas.png">
+             <p>Kelpie es una criatura sobrenatural de la mitología celta escocesa que habita en ríos y lagos. Suele adoptar la apariencia de un hermoso caballo negro, atrayendo a los viajeros para que monten sobre su lomo. Una vez encima, su piel se vuelve pegajosa y arrastra a sus víctimas hasta las profundidades del agua. Representa los peligros ocultos de la naturaleza y el misterio de las aguas escocesas.</p>
+        </div>
+    </div>
+
+    <div id="dios3" class="tarjeta_criaturas">
+        <div class="hero_izq">
+            <img id="fotos_criaturas" src="criatura3.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Selkie</h3>
+             <img src="separador_tarjetas.png">
+             <p>Selkie es una criatura mágica de la mitología celta, especialmente del folclore de Escocia e Irlanda. Tiene la capacidad de transformarse de foca en humana al quitarse su piel. Según las leyendas, las selkies viven en el mar, pero pueden salir a tierra y adoptar una hermosa apariencia humana. Sus historias suelen hablar de amor, libertad y nostalgia por el océano, al que siempre desean regresar.</p>
+        </div>
+    </div>
+
+</div>
+<button id="boton_cerrar" class="play" popovertarget="popo_criaturas" popovertargetaction="hide">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="tarjetas" id="leyenda">
+                    <div class="heroes_arriba"></div>
+                    <div class="heroes_abajo">
+                    <h4>Historias y leyendas</h4>
+                    <p>Relatos que han pasado de generación en generación que perdurarán.</p>
+                    <button popovertarget="popo_historias">Historias</button>
+                    <div id="popo_historias" popover="auto">
+                        <div class="galeria_heroes">
+
+    <div id="leyenda1" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img id="fotos_leyendas" src="leyenda1.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Fionn Mac Cumhaill </h3>
+             <img src="separador_tarjetas.png">
+             <p>Fionn Mac Cumhaill y el Salmón del Conocimiento es una leyenda de la mitología celta irlandesa. Según el relato, un salmón mágico había adquirido toda la sabiduría del mundo al alimentarse de unas avellanas sagradas. Fionn probó accidentalmente su carne y obtuvo el don del conocimiento y la sabiduría, convirtiéndose en uno de los héroes más importantes de Irlanda.</p>
+        </div>
+    </div>
+
+    <div id="leyenda2" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img id="fotos_leyendas" src="leyenda2.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>El Dullahan</h3>
+             <img src="separador_tarjetas.png">
+             <p>Dullahan (el Jinete sin Cabeza) es una criatura sobrenatural del folclore celta irlandés. Se trata de un misterioso jinete sin cabeza que cabalga sobre un caballo negro, llevando su propia cabeza bajo el brazo. Recorre los caminos durante la noche y su aparición anuncia la muerte de alguien. Según la leyenda, nadie puede escapar de su presencia cuando pronuncia su nombre.</p>
+        </div>
+    </div>
+
+    <div id="leyenda3" class="tarjeta_heroe">
+        <div class="hero_izq">
+            <img id="fotos_leyendas" src="leyenda3.png">
+        </div>
+        <div class="heroe_dch">
+            <h3>Los hijos de Lir</h3>
+             <img src="separador_tarjetas.png">
+             <p>Los Hijos de Lir es una de las leyendas más conocidas de la mitología celta irlandesa. Cuenta la historia de cuatro hermanos que fueron transformados en cisnes por Aoife, su celosa madrastra, mediante un poderoso hechizo. Condenados a vivir 900 años sobre lagos y mares, soportaron la soledad y el paso del tiempo sin poder recuperar su forma humana. Su historia simboliza el amor fraternal, la resistencia y la tristeza.</p>
+        </div>
+    </div>
+
+</div>
+<button id="boton_cerrar" class="play" popovertarget="popo_historias" popovertargetaction="hide">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="planta3_merlin">
+                <video id="merlin_video" autoplay muted loop playsinline>
+                <source src="aaaaaaaaaa.mp4" type="video/mp4" />
+            </video>
+            </div>
+
+        </div>
+        
+        <div id="planta4">
+          <div id="planta4_arriba">
+            <h1>El mundo celta</h1>
+            <p>«Adéntrate en el mundo celta, donde la magia de los antiguos dioses, las leyendas y la naturaleza se entrelazan en un universo lleno de misterio.»</p>
+          </div>
+          <div id="planta4_abajo">
+            <div class="planta4_tarjetas" id="tarjeta1">
+                <img src="cruz.png">
+                <h4>Cruz celta</h4>
+                <p>Equilibrio eterno entre tierra y cielo.</p>
+            </div>
+            <div class="planta4_tarjetas" id="tarjeta2">
+                <img src="piedras.png">
+                <h4>Piedras celtas</h4>
+                <p>Las piedras celtas guardan secretos.</p>
+            </div>
+            <div class="planta4_tarjetas" id="tarjeta3">
+                <img src="broche.png">
+                <h4>Broche celta</h4>
+                <p>Nudos eternos guardan historia ancestral.</p>
+            </div>
+            <div class="planta4_tarjetas" id="tarjeta4">
+                <img src="arbol.png">
+                <h4>Árbol sagrado</h4>
+                <p>Sus raíces guardan nuestra historia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="planta5">
+            <div id="planta5_arriba">
+                <h1>El ciclo sagrado de la naturaleza</h1>
+                <p>Ocho festividades, cuatro estaciones y una conexión ancestral con la tierra.</p>
+            </div>
+
+            <div id="planta5_fotos">
+                <div class="cuadrante" id="cuadro1">
+                   
+                    <div id="foto1" >
+                            <div id="tooltip1" class="tooltip">
+                                <h3>Samhain</h3>
+                                <p>El final y el renacimiento</p>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="cuadrante" id="cuadro2">
+                    <div id="foto2" >
+                            <div id="tooltip2" class="tooltip">
+                                <h3>Imbolc</h3>
+                                <p>El despertar de la luz</p>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="cuadrante" id="cuadro3">
+                    <div id="foto3" >
+                            <div id="tooltip3" class="tooltip">
+                                <h3>Beltane</h3>
+                                <p>El esplendor de la vida</p>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="cuadrante" id="cuadro4">
+                    <div id="foto4" >
+                            <div id="tooltip4" class="tooltip">
+                                <h3>Lughnasadh</h3>
+                                <p>La cosecha de la abundancia</p>
+                            </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footer_arriba">
+                <div id="footer_arriba_izq">
+                    <div id="email_footer"><img src="email.png"></div>
+                    <div id="texto_footer">
+                        <h3>Suscríbete a la mejor newsletter de clase</h3>
+                        <p>Recibe historias, curiosidades y mucho más </p>
+                    </div>
+                </div>
+                <div id="footer_arriba_dch">
+                    <input id="email_formu1" type="email" name="nombre_usuario" value="" 
+                minlength="5" maxlength="15" placeholder="Escribe tu email..."
+                tabindex="1" autofocus required/>
+                    <label id="email_formu2" for="nombre">Suscribirse:</label>
+                </div>
+            </div>
+            <div id="footer_abajo">
+                <div id="footer_abajo_izq">
+                    <h4>Mitología celta</h4>
+                    <p>Conecta con un pasado legendario</p>
+                </div>
+                <div id="footer_abajo_dch">
+                    <a id="insta" href="https://www.instagram.com/mitologiayculturacelta/"><img src="instagram_dorado.png"></a>
+                    <a id="yt" href="https://www.youtube.com/playlist?list=PLag-vCNkW7_R2Hq9J-2nqMcDJF0MSHRzq"><img src="youtube_dorado.png"></a>
+                    <a id="fb" href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmitologiacelta%2F"><img src="facebook_dorado.png"></a>
+                    <a id="tik" href="https://www.tiktok.com/tag/mitologiacelta"><img src="tiktok_dorado.png"></a>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    </div>
+    
+</body>
+</html>
