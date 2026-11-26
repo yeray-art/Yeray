@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<style>
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none; 
+        scroll-behavior: smooth;
+}
+#wrapper{
+    width: 650px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #202426;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+    font-family: Georgia, serif;
+    font-size: 86px;
+    font-weight: normal;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    color: #EEEAE2;
+    text-align: center;
+}
+}
+#proyectos{
+    width: 100%;
+    height: 500px;
+    background-color: #151719;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.proyecto_carpetas{
+    width: 45%;
+    aspect-ratio: 1/1;
+    outline: 1px solid white;
+    background-color: #252A2C;
+    color: #EEEAE2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    h3{
+        text-align: center;
+        font-size: 16px;
+        transform: translateY(-10px);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    img{
+        width: 100%;
+        height: 80%;
+    }
+}
+</style>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Mis proyectos</h1>
+        </header>
+        <div id="proyectos">
+            <div class="proyecto_carpetas">
+                <a href=""><img src="img/torii_index.png"></a>
+                <h3>Newsletter 1 (Gastronomía japonesa)</h3>
+            </div>
+            <div class="proyecto_carpetas">
+                <img src="img/cruz_index.png">
+                <h3>Newsletter 2 (Mitología celta)</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
